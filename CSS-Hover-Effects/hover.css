@@ -1,0 +1,278 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+h1:before {
+	top: 0;
+	left: 0;
+}
+
+h1:after {
+	bottom: 0;
+	left: 0;
+}
+
+h1 {
+  color: blue;
+  postion: relative;
+  width: 600px;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+nav.one, nav.two {
+  text-align: center;
+  background: white;
+  padding: 50px 0;
+}
+
+nav.one ul, nav.two ul {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0 0 50px 0;
+}
+
+nav.one ul li, nav.two ul li {
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+nav.one ul li:last-child {
+  margin: 0 0 0 0;
+}
+
+nav.one a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(0, 0, 255, 0.3);
+  font-size: 12px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+nav.one a:before, nav.one a:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: blue;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+	transition: all 0.2s ease;
+}
+
+nav.one a:before {
+  top: 0px;
+  left: 0;
+  -webkit-transform-origin: 0 0;
+  
+}
+
+nav.one a:after {
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: 100% 0;
+}
+
+nav.one a span {
+  position: relative;
+  display: inline-block;
+  padding: 7px 20px;
+  border: 1px solid rgba(0, 0, 255, 0.1);
+}
+
+nav.one a span:before, nav.two a span:after {
+  content: "";
+  dispaly: inline-block;
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background: blue;
+  -webkit-transform: scaleY(0);
+  transition: all 0.2s ease 0.2s;
+}
+
+nav.one a span:before {
+  left: -1px;
+  top: 0;
+  -webkit-transform-origin: 0 100%;
+}
+
+nav.one a span:after {
+  right: -1px;
+  top: 0;
+  webkit-tranform-origin: 0 0;
+}
+
+/* -------------- */
+
+nav.one p {
+  font-weight: 300;
+}
+
+nav.one>div {
+  position: relative;
+  width: 460px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 0px blue;
+  transition: all 0.2s ease 0s;
+  -webkit-transform: translateY(0px) translateX(0px);
+}
+
+nav.one>div:before, nav.one>div:after {
+  display: inline-block;
+  position: absolute;
+  content: " ";
+  width: 100px;
+  height: 3px;
+  background: blue;
+  -webkit-transform: scaleX(0);
+  transition: all 0.2s ease;
+}
+
+nav.one>div:before {
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: 0 0;
+}
+
+nav.one>div:after {
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: 100% 0;
+}
+
+nav.one div div {
+  width: 100%;
+  marign: 0 auto;
+  padding: 50px;
+  text-align: left;
+  color: blue;
+  /* border: 3px solid rgba(0, 0, 255, 0.3); */
+}
+
+nav.one div div:before, nav.one div div:after {
+  display: inline-block;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  height: 100%;
+  background: blue;
+  -webkit-transfrom: scaleY(0);
+  transition: all 0.2s ease 0.2s;
+}
+
+nav.one div div:before {
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: 0 100%;
+}
+
+nav.one div div:after {
+  top: 0;
+  right: 0;
+  -webkit-transform-origin: 0 0;
+}
+
+nav.one a:hover {
+  color: rgba(0, 0, 225, 1);
+}
+
+/*
+top part of 'hover us' boxes
+*/
+nav.one a:hover:before, nav.one a:hover:after {
+  -webkit-transform: scaleX(1);
+}
+
+/*
+left side of 'hover us' boxes
+*/
+nav.one a:hover span:before, nav.one a:hover span:after {
+  -webkit-transform: scaleY(1);
+}
+
+/*
+middle 'hover me' blue box-shadow and moves box up -10
+*/
+nav.one>div:hover {
+  box-shadow: 20px 20px 0px blue;
+  -webkit-transform: translateY(-10px) translateX(-10px);
+  transition: all 0.2s ease 0.4s;
+}
+
+nav.one>div:hover:before, nav.one>div:hover:after {
+	-webkit-transform: scaleX(1);
+}
+
+nav.one div div:hover:before, nav.one div div:hover:after {
+	-webkit-transform: scaleY(1);
+}
+
+
+nav.two {
+	background: blue;
+}
+
+nav.two h1 {
+	color: white;
+}
+
+nav.two h1:before, nav.two h1:after {
+	background: white;
+}
+
+nav.two a {
+	display: inline-block;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.3);
+	font-size: 12px;
+	position: relative;
+	padding: 7px 20px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	overflow: hidden;
+	transition: all 0.4s ease-out 0s;
+}
+
+nav.two a:before {
+	content: " ";
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: -30px;
+	margin-top: -30px;
+	width: 10px;
+	height: 60px;
+	background: rgba(255, 255, 255, 0);
+	-webkit-transform: rotate(45deg);
+}
+
+nav.two a:hover {
+	color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(255, 255, 255, 1);
+	transition: all 0.5s ease-out 0.1s;
+}
+
+nav.two a:hover:before {
+	left:120%;
+	transition: all 0.5s ease;
+	background: rgba(255, 255, 255, 1);
+}
